@@ -3,8 +3,9 @@ var express = require('express');
 var path = require('path');
 var app = express();
 
-//app.use(express.static(path.join(__dirname, 'game')));
-app.use('/game', express.static(path.join(__dirname + '/game')));
+app.use('/public', express.static(path.join(__dirname + '/public')));
+app.use('/src', express.static(path.join(__dirname + '/src')));
+app.use('/assets', express.static(path.join(__dirname + '/public/assets')));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
 app.use('/', function(req, res, next) {
