@@ -1,0 +1,19 @@
+{
+  "name": "jdm-phaser-game",
+  "version": "0.0.0",
+  "homepage": "https://github.com/justindmyers/jdm-phaser-game",
+  "authors": [
+    "Justin Myers <justin.myers@responsivepath.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "phaser": "~2.3.0"
+  }
+}
