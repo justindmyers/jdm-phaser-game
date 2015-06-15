@@ -29,3 +29,4 @@ bower_components
 
 public/*.js
 public/*.js.map
+.idea/
