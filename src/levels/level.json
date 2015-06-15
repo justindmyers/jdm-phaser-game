@@ -1,0 +1,127 @@
+{
+	"assets": {
+		"name": "assets",
+		"contents": [
+			{
+				"name": "Loading",
+				"contents": [
+					{
+						"id": 1,
+						"name": "loader.png",
+						"fullPath": "/Loading/loader.png",
+						"key": "/loader.png",
+						"width": 400,
+						"height": 40,
+						"frameWidth": 400,
+						"frameHeight": 40,
+						"frameMax": -1,
+						"margin": 0,
+						"spacing": 0,
+						"anchorX": 0,
+						"anchorY": 0,
+						"fps": 10,
+						"updated": 1406817915033,
+						"atlas": ""
+					}
+				],
+				"count": 0,
+				"id": 4,
+				"fullPath": "/Loading",
+				"isClosed": true
+			}
+		],
+		"count": 1
+	},
+	"objects": {
+		"name": "objects",
+		"contents": [
+            {
+				"id": "tmp1406818026618",
+				"name": "Loading",
+				"x": 0,
+				"y": 0,
+				"angle": 0,
+				"contents": [
+					{
+						"assetId": 1,
+						"x": 256,
+						"y": 192,
+						"type": 0,
+						"anchorX": 0,
+						"anchorY": 0,
+						"scaleX": 1,
+						"scaleY": 1,
+						"angle": 0,
+						"alpha": 1,
+						"frame": 0,
+						"isVisible": 1,
+						"isLocked": 0,
+						"width": 400,
+						"height": 40,
+						"id": "tmp1406818026616",
+						"name": "loading",
+						"fullPath": "/Loading/loading",
+						"contents": [],
+						"assetKey": "/loader.png",
+                        "physics": {
+        					"enable": 1,
+        					"immovable": 1,
+        					"bounce": {
+        						"x": 1,
+        						"y": 1
+        					},
+        					"gravity": {
+        						"allow": 1,
+        						"x": 0,
+        						"y": 0
+        					},
+        					"size": {
+        						"width": -1,
+        						"height": -1,
+        						"offsetX": 0,
+        						"offsetY": 0
+        					},
+        					"rotation": {
+        						"allowRotation": 0,
+        						"maxAngular": 0
+        					},
+        					"maxVelocity": 0,
+        					"mass": 1,
+        					"collideWorldBounds": 0
+        				}
+					}
+				],
+				"isVisible": true,
+				"isLocked": true,
+				"isFixedToCamera": 0,
+				"fullPath": "/Loading",
+				"isClosed": true,
+				"movies": {
+					"__main": {
+						"frames": [],
+						"info": {
+							"fps": 60
+						},
+						"subdata": []
+					}
+				},
+				"type": 1
+			}
+		],
+		"count": 0
+	},
+	"map": {
+		"cameraX": 0,
+		"cameraY": 0,
+		"worldWidth": 800,
+		"worldHeight": 600,
+		"viewportWidth": 800,
+		"viewportHeight": 600,
+		"gridX": 64,
+		"gridY": 64,
+		"gridOffsetX": 0,
+		"gridOffsetY": 0,
+		"showGrid": 1,
+		"backgroundColor": "#222222"
+	}
+}

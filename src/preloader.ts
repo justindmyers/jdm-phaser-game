@@ -8,6 +8,8 @@ module PhaserGame {
             this.preloadBar = this.add.sprite(200, 250, 'preloadBar');
             this.load.setPreloadSprite(this.preloadBar);
 
+            this.stage.backgroundColor = '#3cc0fa';
+
             //  Load our actual games assets
             this.load.image('titlepage', 'assets/titlepage.jpg');
             this.load.image('logo', 'assets/logo.png');
