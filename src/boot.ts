@@ -1,4 +1,3 @@
-/// <reference path="../bower_components/phaser/typescript/phaser.d.ts"/>
 module PhaserGame {
     export class Boot extends Phaser.State {
         preload() {

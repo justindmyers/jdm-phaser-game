@@ -1,4 +1,3 @@
-/// <reference path="../bower_components/phaser/typescript/phaser.d.ts"/>
 module PhaserGame {
     export class Preloader extends Phaser.State {
         preloadBar: Phaser.Sprite;
@@ -7,8 +6,6 @@ module PhaserGame {
             //  Set-up our preloader sprite
             this.preloadBar = this.add.sprite(200, 250, 'preloadBar');
             this.load.setPreloadSprite(this.preloadBar);
-
-            this.stage.backgroundColor = '#3cc0fa';
 
             //  Load our actual games assets
             this.load.image('titlepage', 'assets/titlepage.jpg');
@@ -25,7 +22,7 @@ module PhaserGame {
         }
         
         startMainMenu() {
-            this.game.state.start('MainMenu', true, false);
+            this.game.state.start('Level1', true, false);
         }
     }
 }

@@ -1,4 +1,3 @@
-/// <reference path="../../bower_components/phaser/typescript/phaser.d.ts"/>
 /// <reference path="interfaces/level.ts"/>
 
 module PhaserGame {
@@ -15,6 +14,7 @@ module PhaserGame {
         levelData: Level;
         assetsPath: string;
         assets: Object;
+        loadedData: Object;
            
         constructor() {
             super();
@@ -36,9 +36,6 @@ module PhaserGame {
 		}
         
         preload() {
-            //this._loadAssets(this.data.assets.contents, this.assets, "");
-			//this._loadFonts(this.data.objects);
-            
             this.load.onFileComplete.add(function(progress, key, success) {
                 if (success && key === 'data') {
                     this.levelData = this.cache.getJSON(key);
@@ -51,8 +48,7 @@ module PhaserGame {
         
         create() {
             this.game.world.setBounds(0, 0, this.levelData.map.worldWidth, this.levelData.map.worldHeight);
-            this.createAll();
-            //his.game = new Phaser.Game(mt.data.map.viewportWidth, mt.data.map.viewportHeight, Phaser.AUTO, document.body, window["%namespace%"].state.boot);
+            this.loadedData = this.createAll();
         }
         
         //Renamed this function to not conflict with 
@@ -541,23 +537,24 @@ module PhaserGame {
 		_addTileLayer(object, group) {
 			group = group || this.game.world;
 			var map = this.game.add.tilemap(null, object.tileWidth, object.tileHeight, object.widthInTiles, object.heightInTiles);
-			
 			var tl = map.createBlankLayer(object.name, object.widthInTiles, object.heightInTiles, object.tileWidth, object.tileHeight);
 			
 			var nextId = 0;
 			var im = null;
 			var asset;
-			for(var i=0; i<object.images.length; i++){
-				asset = this.getAssetById(object.images[i]);
-				
-				if(asset){
-					im = map.addTilesetImage(asset.key, asset.key, asset.frameWidth, asset.frameHeight, asset.margin, asset.spacing, nextId);
-					nextId += im.total;
-				}
-				else{
-					console.warn("cannot find image", object.images[i]);
-				}
-			}
+            if(typeof object.images !== 'undefined') {
+    			for(var i=0; i<object.images.length; i++){
+    				asset = this.getAssetById(object.images[i]);
+    				
+    				if(asset){
+    					im = map.addTilesetImage(asset.key, asset.key, asset.frameWidth, asset.frameHeight, asset.margin, asset.spacing, nextId);
+    					nextId += im.total;
+    				}
+    				else{
+    					console.warn("cannot find image", object.images[i]);
+    				}
+    			}
+            }
 			
 			var tiles = object.tiles;
 			var tile = null;

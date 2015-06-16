@@ -1,4 +1,3 @@
-/// <reference path="../bower_components/phaser/typescript/phaser.d.ts"/>
 module PhaserGame {
     export class Player extends Phaser.Sprite {
         constructor(game: Phaser.Game, x: number, y: number) {
@@ -10,9 +9,11 @@ module PhaserGame {
             this.anchor.setTo(0.5, 0);
             this.animations.add('walk', [0, 1, 2, 3, 4], 10, true);
             
-            this.body.bounce.y = 0.2;
-            this.body.gravity.y = 300;
+            this.body.bounce.y = 0.0;
+            this.body.gravity.y = 600;
             this.body.collideWorldBounds = true;
+            
+            game.camera.follow(this);
         }
 
         update() {
@@ -37,7 +38,7 @@ module PhaserGame {
             }
             
             //  Allow the player to jump if they are touching the ground.
-            if (this.game.input.keyboard.isDown(Phaser.Keyboard.UP) && this.body.touching.down)
+            if (this.game.input.keyboard.isDown(Phaser.Keyboard.UP) && (this.body.touching.down || this.body.blocked.down))
             {
                 this.body.velocity.y = -350;
             }
