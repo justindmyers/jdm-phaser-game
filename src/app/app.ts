@@ -40,11 +40,14 @@ module PhaserGame {
         private health: String = 'test';
         constructor(private $scope: ng.IScope, private $window: ng.IWindowService) {
             var self = this;
-            $window['myVarWatch'].watch(function(value) {
+            var unbind = $window['myVarWatch'].watch(function(value) {
                 $scope.$apply(function() {
                     self.health = value.current;    
                 });
             });
+            
+            // Unbind the listener when the scope is destroyed
+            $scope.$on('$destroy', unbind);
         }
     }
     
