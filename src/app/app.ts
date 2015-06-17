@@ -37,17 +37,23 @@ module PhaserGame {
     "use strict";
     var app = getModule();
     class MainController {
+        private currentState: Phaser.StateManager;
         private health: String = 'test';
         constructor(private $scope: ng.IScope, private $window: ng.IWindowService) {
             var self = this;
             var unbind = $window['myVarWatch'].watch(function(value) {
                 $scope.$apply(function() {
-                    self.health = value.current;    
+                    self.currentState = value;
+                    console.log(self.currentState);
                 });
             });
             
             // Unbind the listener when the scope is destroyed
             $scope.$on('$destroy', unbind);
+        }
+        
+        goToMainMenu() {
+            this.currentState.start('MainMenu', true);
         }
     }
     
