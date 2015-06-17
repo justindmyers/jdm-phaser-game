@@ -23,6 +23,9 @@ module PhaserGame {
         
 		init() {
 			this.game.load.crossOrigin = "anonymous";
+            
+            window['state'] = this.game.state;
+            window['myVarWatch'].trigger();
 			
 			/*if(Phaser.VERSION == "2.0.7"){
 				this.game.load.script("hacks", "js/lib/phaserHacks2.0.7.js");

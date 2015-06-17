@@ -1,5 +1,10 @@
 module PhaserGame {
     export class Boot extends Phaser.State {
+        init() {
+            window['state'] = this.game.state;
+            window['myVarWatch'].trigger();
+        }
+        
         preload() {
             this.load.image('preloadBar', 'assets/loader.png');
         }

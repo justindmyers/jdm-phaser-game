@@ -2,6 +2,11 @@ module PhaserGame {
     export class MainMenu extends Phaser.State {
         background: Phaser.Sprite;
         logo: Phaser.Sprite;
+        
+        init() {
+            window['state'] = this.game.state;
+            window['myVarWatch'].trigger();
+        }
 
         create() {
             this.background = this.add.sprite(0, 0, 'titlepage');

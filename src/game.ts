@@ -6,11 +6,12 @@ module PhaserGame {
             this.state.add('Preloader', Preloader, false);
             this.state.add('MainMenu', MainMenu, false);
             this.state.add('Level1', Level1, false);
-            this.state.start('Boot');
+            this.state.start('Boot');       
         }
     }
 } 
 
 window.onload = () => {
-    var game = new PhaserGame.Game();
+    window['game'] = new PhaserGame.Game();
+    angular.bootstrap(document, ['app']);
 };
