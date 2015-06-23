@@ -4,5 +4,16 @@
 		"module": "amd",
 		"sourceMap": true,
         "out": "./public/compiled.js"
-	}
+	}, "files": [
+        "src/app/app.ts",
+        "src/lib/interfaces.ts",
+        "src/lib/jdmGameConfig.ts",
+        "src/lib/jdmGameState.ts",
+        "src/boot.ts",
+        "src/game.ts",
+        "src/mainmenu.ts",
+        "src/player.ts",
+        "src/preloader.ts",
+        "src/levels/testlevel/testlevel.ts"
+    ]
 }

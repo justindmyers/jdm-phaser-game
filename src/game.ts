@@ -1,5 +1,7 @@
 module PhaserGame {
     export class Game extends Phaser.Game {
+        CONFIG: jdmGameConfig = new jdmGameConfig(); //merge from json file later
+        
         constructor() {
             super(800, 600, Phaser.AUTO, 'content', null);
             
@@ -10,13 +12,10 @@ module PhaserGame {
             this.state.start('Boot');
         }
         
-        create() {
-            console.log(this.canvas);
-            console.log(this.context);
-            
+        create() {            
             Phaser.Canvas.setImageRenderingCrisp(this.canvas);  //for Canvas, modern approach
     		Phaser.Canvas.setSmoothingEnabled(this.context, false);  //also for Canvas, legacy approach
-    		PIXI.scaleModes.DEFAULT = PIXI.scaleModes.NEAREST; //for WebGL
+    		//PIXI.scaleModes.DEFAULT = PIXI.scaleModes.NEAREST; //for WebGL
         }
     }
 } 

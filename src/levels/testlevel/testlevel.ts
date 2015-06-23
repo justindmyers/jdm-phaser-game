@@ -1,7 +1,6 @@
-/// <reference path="../../lib/jdmGameState.ts" />
 module PhaserGame {
     export class TestLevel extends jdmGameState {
-        map: Phaser.TileMap;
+        map: Phaser.Tilemap;
         cursor: Phaser.CursorKeys;
         layer: Object;
         player: Player;
@@ -19,14 +18,10 @@ module PhaserGame {
                 triggers = this.getObjectsByName(mapObjects, 'Triggers'),
                 enemies = this.getObjectsByName(mapObjects, 'Enemies'),
                 playerData = this.getObjectsByName(Lazy(spawns.pluck('objects').value()[0]), 'PlayerStart').value()[0]
-                
-            console.log(this.spawns);
-            
+                            
             this.cursor = this.input.keyboard.createCursorKeys();
             this.stage.backgroundColor = "#3fc1fb";
-                
             this.player = new Player(this.game, playerData.x, playerData.y); 
-            
             this.game.physics.p2.convertTiledCollisionObjects(this.map, 'collision');
         }
         

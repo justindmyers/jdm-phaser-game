@@ -1,5 +1,5 @@
 module PhaserGame {
-    export class Boot extends Phaser.State {
+    export class Boot extends jdmGameState {
         init() {
             window['state'] = this.game.state;
             window['myVarWatch'].trigger();

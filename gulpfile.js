@@ -20,7 +20,6 @@ function build() {
     var tsResult = gulp.src('src/**/*.ts')
         .pipe(typescript(typescriptConfig.compilerOptions));
     return tsResult.js.pipe(gulp.dest(''));
-   
 }
 
 function pack() {

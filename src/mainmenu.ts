@@ -1,5 +1,5 @@
 module PhaserGame {
-    export class MainMenu extends Phaser.State {
+    export class MainMenu extends jdmGameState {
         background: Phaser.Sprite;
         logo: Phaser.Sprite;
         

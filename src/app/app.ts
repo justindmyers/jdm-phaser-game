@@ -1,6 +1,6 @@
-// <reference path="../../typings/tsd.d.ts"/>
+/// <reference path="../../typings/tsd.d.ts"/>
 module PhaserGame {
-    window['state'] = {};
+    window['state'] = {}; 
     
     window['myVarWatch'] = (function() {
         var watches = {};
@@ -23,7 +23,7 @@ module PhaserGame {
             }
         }
     })();
-}
+} 
 
 module PhaserGame {
     "use strict";
