@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="left-down" width="35" height="24" tilewidth="64" tileheight="64" nextobjectid="28">
+<map version="1.0" orientation="orthogonal" renderorder="left-down" width="35" height="24" tilewidth="64" tileheight="64" nextobjectid="53">
  <tileset firstgid="1" name="Default" tilewidth="64" tileheight="64">
   <terraintypes>
    <terrain name="My Terrain" tile="-1"/>
@@ -310,7 +310,7 @@
    <tile gid="0"/>
    <tile gid="10"/>
    <tile gid="10"/>
-   <tile gid="14"/>
+   <tile gid="9"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -450,7 +450,7 @@
    <tile gid="9"/>
    <tile gid="10"/>
    <tile gid="10"/>
-   <tile gid="14"/>
+   <tile gid="9"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -555,7 +555,7 @@
    <tile gid="9"/>
    <tile gid="10"/>
    <tile gid="10"/>
-   <tile gid="14"/>
+   <tile gid="9"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -625,7 +625,7 @@
    <tile gid="10"/>
    <tile gid="8"/>
    <tile gid="8"/>
-   <tile gid="14"/>
+   <tile gid="9"/>
    <tile gid="0"/>
    <tile gid="4"/>
    <tile gid="9"/>
@@ -1152,6 +1152,9 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1274,6 +1277,8 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1286,6 +1291,10 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1361,6 +1370,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="37"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1385,6 +1395,11 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1435,6 +1450,8 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="41"/>
+   <tile gid="37"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1447,6 +1464,12 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1461,14 +1484,21 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="41"/>
+   <tile gid="34"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1485,8 +1515,11 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="37"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="37"/>
+   <tile gid="34"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1494,41 +1527,8 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1818,12 +1818,12 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="41"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="42"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1844,22 +1844,22 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="42"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="41"/>
+   <tile gid="34"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="35"/>
+   <tile gid="42"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1884,18 +1884,18 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="35"/>
+   <tile gid="37"/>
+   <tile gid="37"/>
+   <tile gid="34"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="35"/>
+   <tile gid="37"/>
    <tile gid="36"/>
    <tile gid="37"/>
    <tile gid="34"/>
@@ -2212,6 +2212,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="6"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2245,6 +2246,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="6"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2278,6 +2280,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="6"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2311,10 +2314,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="6"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -3604,14 +3604,14 @@
    <tile gid="51"/>
   </data>
  </layer>
- <objectgroup name="Triggers">
+ <objectgroup color="#fff409" name="Triggers">
   <object id="11" name="West" type="MapExit" x="-26" y="924" width="36" height="78"/>
   <object id="13" name="East" type="MapExit" x="2206" y="1106" width="36" height="78"/>
   <object id="17" name="East" type="MapExit" x="2216" y="933" width="36" height="78"/>
   <object id="18" name="East" type="MapExit" x="2208" y="667" width="36" height="78"/>
   <object id="19" name="West" type="MapExit" x="-12" y="1303" width="36" height="78"/>
  </objectgroup>
- <objectgroup name="Spawns">
+ <objectgroup color="#3f96ff" name="Spawns">
   <object id="20" name="PlayerStart" type="GameStart" x="130" y="934" width="37" height="67"/>
   <object id="21" name="WestEnter" type="MapEnter" x="32" y="924" width="36" height="78">
    <properties>
@@ -3629,5 +3629,22 @@
   <object id="25" name="Enemy" type="Walker" x="1902" y="1196" width="68" height="76"/>
   <object id="26" name="Enemy" type="Flyer" x="1158" y="1194" width="68" height="76"/>
   <object id="27" name="Enemy" type="Walker" x="1104" y="1378" width="68" height="76"/>
+ </objectgroup>
+ <objectgroup name="collision">
+  <object id="28" x="0" y="1029" width="320" height="120.884"/>
+  <object id="31" x="512" y="128" width="192" height="64"/>
+  <object id="39" x="448" y="387" width="256" height="59.9805"/>
+  <object id="40" x="384" y="579" width="320" height="59.136"/>
+  <object id="41" x="322.397" y="706.61" width="380.409" height="124.584"/>
+  <object id="44" x="130.29" y="773.181" width="188.302" height="56.1103"/>
+  <object id="46" x="386.017" y="1027.25" width="187.351" height="60.8654"/>
+  <object id="47" x="705.659" y="1028.06" width="189.253" height="56.1103"/>
+  <object id="48" x="0" y="1412" width="320" height="128"/>
+  <object id="49" x="320" y="1476" width="256" height="64"/>
+  <object id="50" x="642.891" y="1349.5" width="252.972" height="183.547"/>
+  <object id="51" x="901.569" y="1477.89" width="310.984" height="54.2083"/>
+  <object id="52" x="319" y="1415.37">
+   <polyline points="0,0 62.7675,60.8654 0.951022,60.8654 0.951022,0.951022"/>
+  </object>
  </objectgroup>
 </map>

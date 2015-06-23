@@ -1,0 +1,592 @@
+{
+    "meta": {
+        "generated": "1434947871414",
+        "version": "1.0",
+        "app": "gulp-phaser-tiled-pack",
+        "url": "https://github.com/englercj/gulp-phaser-tiled-pack"
+    },
+    "test": [
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_0_Default",
+            "name": "Default_image_0",
+            "url": "../../public/assets/scene/block_bottom.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_1_Default",
+            "name": "Default_image_1",
+            "url": "../../public/assets/scene/block_corner_large_bottom_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_2_Default",
+            "name": "Default_image_2",
+            "url": "../../public/assets/scene/block_corner_large_bottom_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_3_Default",
+            "name": "Default_image_3",
+            "url": "../../public/assets/scene/block_corner_large_top_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_4_Default",
+            "name": "Default_image_4",
+            "url": "../../public/assets/scene/block_corner_large_top_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_5_Default",
+            "name": "Default_image_5",
+            "url": "../../public/assets/scene/block_corner_small_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_6_Default",
+            "name": "Default_image_6",
+            "url": "../../public/assets/scene/block_corner_small_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_7_Default",
+            "name": "Default_image_7",
+            "url": "../../public/assets/scene/block_normal_01.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_8_Default",
+            "name": "Default_image_8",
+            "url": "../../public/assets/scene/block_normal_02.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_9_Default",
+            "name": "Default_image_9",
+            "url": "../../public/assets/scene/block_normal_03.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_10_Default",
+            "name": "Default_image_10",
+            "url": "../../public/assets/scene/block_rounded_bottom_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_11_Default",
+            "name": "Default_image_11",
+            "url": "../../public/assets/scene/block_rounded_bottom_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_12_Default",
+            "name": "Default_image_12",
+            "url": "../../public/assets/scene/block_rounded_top_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_13_Default",
+            "name": "Default_image_13",
+            "url": "../../public/assets/scene/block_rounded_top_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_14_Default",
+            "name": "Default_image_14",
+            "url": "../../public/assets/scene/block_slope_bottom_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_15_Default",
+            "name": "Default_image_15",
+            "url": "../../public/assets/scene/block_slope_bottom_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_16_Default",
+            "name": "Default_image_16",
+            "url": "../../public/assets/scene/block_slope_top_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_17_Default",
+            "name": "Default_image_17",
+            "url": "../../public/assets/scene/block_slope_top_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_18_Default",
+            "name": "Default_image_18",
+            "url": "../../public/assets/scene/darkblock_bottom.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_19_Default",
+            "name": "Default_image_19",
+            "url": "../../public/assets/scene/darkblock_corner_small_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_20_Default",
+            "name": "Default_image_20",
+            "url": "../../public/assets/scene/darkblock_corner_small_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_21_Default",
+            "name": "Default_image_21",
+            "url": "../../public/assets/scene/darkblock_corner_top_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_22_Default",
+            "name": "Default_image_22",
+            "url": "../../public/assets/scene/darkblock_normal.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_23_Default",
+            "name": "Default_image_23",
+            "url": "../../public/assets/scene/darkblock_normal_02.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_24_Default",
+            "name": "Default_image_24",
+            "url": "../../public/assets/scene/darkblock_normal_03.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_25_Default",
+            "name": "Default_image_25",
+            "url": "../../public/assets/scene/darkblock_rounded_bottom_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_26_Default",
+            "name": "Default_image_26",
+            "url": "../../public/assets/scene/darkblock_rounded_bottom_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_27_Default",
+            "name": "Default_image_27",
+            "url": "../../public/assets/scene/darkblock_rounded_top_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_28_Default",
+            "name": "Default_image_28",
+            "url": "../../public/assets/scene/darkblock_rounded_top_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_29_Default",
+            "name": "Default_image_29",
+            "url": "../../public/assets/scene/darkblock_slope_bottom_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_30_Default",
+            "name": "Default_image_30",
+            "url": "../../public/assets/scene/darkblock_slope_bottom_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_31_Default",
+            "name": "Default_image_31",
+            "url": "../../public/assets/scene/darkblock_slope_top_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_32_Default",
+            "name": "Default_image_32",
+            "url": "../../public/assets/scene/darkblock_slope_top_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_33_Default",
+            "name": "Default_image_33",
+            "url": "../../public/assets/scene/grass_overlay_corner_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_34_Default",
+            "name": "Default_image_34",
+            "url": "../../public/assets/scene/grass_overlay_corner_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_35_Default",
+            "name": "Default_image_35",
+            "url": "../../public/assets/scene/grass_overlay_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_36_Default",
+            "name": "Default_image_36",
+            "url": "../../public/assets/scene/grass_overlay_mid.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_37_Default",
+            "name": "Default_image_37",
+            "url": "../../public/assets/scene/grass_overlay_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_38_Default",
+            "name": "Default_image_38",
+            "url": "../../public/assets/scene/grass_overlay_rounded_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_39_Default",
+            "name": "Default_image_39",
+            "url": "../../public/assets/scene/grass_overlay_rounded_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_40_Default",
+            "name": "Default_image_40",
+            "url": "../../public/assets/scene/grass_overlay_slope_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_41_Default",
+            "name": "Default_image_41",
+            "url": "../../public/assets/scene/grass_overlay_slope_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_42_Default",
+            "name": "Default_image_42",
+            "url": "../../public/assets/scene/ladder_mid2.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_43_Default",
+            "name": "Default_image_43",
+            "url": "../../public/assets/scene/ladder_top.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_44_Default",
+            "name": "Default_image_44",
+            "url": "../../public/assets/scene/platform_left.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_45_Default",
+            "name": "Default_image_45",
+            "url": "../../public/assets/scene/platform_mid.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_46_Default",
+            "name": "Default_image_46",
+            "url": "../../public/assets/scene/platform_right.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_47_Default",
+            "name": "Default_image_47",
+            "url": "../../public/assets/scene/rope_end.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_48_Default",
+            "name": "Default_image_48",
+            "url": "../../public/assets/scene/rope_mid.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_49_Default",
+            "name": "Default_image_49",
+            "url": "../../public/assets/scene/rope_start.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_50_Default",
+            "name": "Default_image_50",
+            "url": "../../public/assets/scene/shadow.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_51_Default",
+            "name": "Default_image_51",
+            "url": "../../public/assets/scene/shadow_corner.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_52_Default",
+            "name": "Default_image_52",
+            "url": "../../public/assets/scene/shadow_object.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_53_Default",
+            "name": "Default_image_53",
+            "url": "../../public/assets/scene/spikes.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_54_Default",
+            "name": "Default_image_54",
+            "url": "../../public/assets/scene/stalk_mid.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_55_Default",
+            "name": "Default_image_55",
+            "url": "../../public/assets/scene/stalk_top.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_0_Extras",
+            "name": "Extras_image_0",
+            "url": "../../public/assets/bg/branch_01.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_1_Extras",
+            "name": "Extras_image_1",
+            "url": "../../public/assets/bg/branch_02.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_2_Extras",
+            "name": "Extras_image_2",
+            "url": "../../public/assets/bg/branch_03.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_3_Extras",
+            "name": "Extras_image_3",
+            "url": "../../public/assets/bg/bush_01.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_4_Extras",
+            "name": "Extras_image_4",
+            "url": "../../public/assets/bg/bush_02.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_5_Extras",
+            "name": "Extras_image_5",
+            "url": "../../public/assets/bg/bush_03.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_6_Extras",
+            "name": "Extras_image_6",
+            "url": "../../public/assets/bg/cloud_01.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_7_Extras",
+            "name": "Extras_image_7",
+            "url": "../../public/assets/bg/cloud_02.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_8_Extras",
+            "name": "Extras_image_8",
+            "url": "../../public/assets/bg/cloud_03.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_9_Extras",
+            "name": "Extras_image_9",
+            "url": "../../public/assets/bg/leaves_01.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_10_Extras",
+            "name": "Extras_image_10",
+            "url": "../../public/assets/bg/leaves_02.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_11_Extras",
+            "name": "Extras_image_11",
+            "url": "../../public/assets/bg/leaves_03.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_12_Extras",
+            "name": "Extras_image_12",
+            "url": "../../public/assets/bg/leaves_04.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_13_Extras",
+            "name": "Extras_image_13",
+            "url": "../../public/assets/bg/tree_base.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_14_Extras",
+            "name": "Extras_image_14",
+            "url": "../../public/assets/bg/tree_mid.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_15_Extras",
+            "name": "Extras_image_15",
+            "url": "../../public/assets/bg/tree_top.png",
+            "overwrite": false
+        },
+        {
+            "type": "tiledmap",
+            "key": "test_tiledmap",
+            "url": "assets/test.json",
+            "format": "TILED_JSON"
+        }
+    ]
+}

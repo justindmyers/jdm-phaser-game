@@ -7,14 +7,16 @@
     <link href='http://fonts.googleapis.com/css?family=Overlock:400,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="public/app.css" type="text/css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.js"></script>
+    <script src="bower_components/lazy.js/lazy.js"></script>
     <script src="bower_components/phaser/build/phaser.js"></script>
+    <script src="public/phaser-tiled.js"></script>
     <script src="public/compiled.js"></script>
 </head>
 <body ng-controller="mainCtrl as mainCtrl">
     <div class="game">
         <span class="health">{{ mainCtrl.health }}</span>
         <button ng-click="mainCtrl.goToMainMenu()">Main Menu</button>
-        <div id="content" ></div>
+        <div id="content"></div>
     </div>
 </body>
 </html>
