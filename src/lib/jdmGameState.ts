@@ -1,5 +1,6 @@
 module PhaserGame {
     export class jdmGameState extends Phaser.State {
+        allowPause: Boolean = true;
         constructor() {
             super();
         }
@@ -10,7 +11,6 @@ module PhaserGame {
             if(typeof window['myVarWatch'] !== 'undefined') {
                 window['myVarWatch'].trigger();
             }
-    
         }
     }
 }

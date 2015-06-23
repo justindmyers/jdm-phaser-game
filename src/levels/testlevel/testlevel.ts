@@ -15,10 +15,10 @@ module PhaserGame {
         create() {
             this.map = this.game.add.tiledmap('test');
             var mapObjects = Lazy(this.map.objects),
-                spawns = mapObjects.filter(function(object) { return object.name === 'Spawns'; }),
-                triggers = mapObjects.filter(function(object) { return object.name === 'Triggers'; }),
-                enemies = mapObjects.filter(function(object) { return object.name === 'Enemies'; }),
-                playerData = Lazy(spawns.pluck('objects').value()[0]).filter(function(object) { return object.name === "PlayerStart" }).value()[0]
+                spawns = this.getObjectsByName(mapObjects, 'Spawns'),
+                triggers = this.getObjectsByName(mapObjects, 'Triggers'),
+                enemies = this.getObjectsByName(mapObjects, 'Enemies'),
+                playerData = this.getObjectsByName(Lazy(spawns.pluck('objects').value()[0]), 'PlayerStart').value()[0]
                 
             console.log(this.spawns);
             
@@ -48,5 +48,9 @@ module PhaserGame {
                 this.camera.x += 4;
             }
         } 
+        
+        private getObjectsByName(object, name) {
+            return object.filter(function(object) { return object.name === name; })
+        }
     }
 } 

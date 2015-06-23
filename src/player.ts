@@ -2,7 +2,7 @@ module PhaserGame {
     export class Player extends Phaser.Sprite {
         jumpButton: Phaser.Key = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
         jumpTimer: Number = 0;
-        attackTimer: Number = 0;
+        isAttacking: Boolean = false;
         
         constructor(game: Phaser.Game, x: number, y: number) {
             super(game, x, y, 'simon', 0);
@@ -29,24 +29,34 @@ module PhaserGame {
             this.body.velocity.x = 0;
             this.anchor.setTo(.3, .5);
             
+            if(this.game.input.keyboard.isDown(Phaser.Keyboard.E)) {
+                this.attack();
+            }
+            
             if (this.game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
                 this.body.moveLeft(200);
-                this.animations.play('walk');
+                
+                if(!this.isAttacking) {
+                    this.animations.play('walk');
+                }
 
                 if (this.scale.x == 1) {
                     this.scale.x = -1;
                 }
             } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
                 this.body.moveLeft(-200);
-                this.animations.play('walk');
+                
+                if(!this.isAttacking) {
+                    this.animations.play('walk');
+                }
 
                 if (this.scale.x == -1) {
                     this.scale.x = 1;
                 }
-            } if(this.game.input.keyboard.isDown(Phaser.Keyboard.E)) {
-                this.attack();
             } else {
-                //this.animations.frame = 0;
+                if(!this.isAttacking) {
+                    this.animations.frame = 0;
+                }
             }
             
             if (this.jumpButton.isDown && this.game.time.now > this.jumpTimer && this.checkIfCanJump())
@@ -54,15 +64,16 @@ module PhaserGame {
                 this.body.moveUp(300);
                 this.jumpTimer = this.game.time.now + 750;
             }
-           
- 
         }
         
         attack() {
-            if (this.game.time.now > this.attackTimer)
+            if (!this.isAttacking)
             {
                 this.animations.play('attack');
-                this.attackTimer = this.game.time.now + 250;
+                this.isAttacking = true;
+                this.game.time.events.add(250, function() {
+                    this.isAttacking = false;
+                }, this);
             }
         }
         
