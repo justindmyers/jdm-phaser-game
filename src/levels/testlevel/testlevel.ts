@@ -5,13 +5,22 @@ module PhaserGame {
         layer: Object;
         player: Player;
         spawns: Object;
+        background: Phaser.TileSprite;
+        maxCamera: number;
+        backgroundCameraPosition: number;
         
         preload() {
             // the key will be the filename of the map without the extension.
             this.game.load.pack('test', '/assets/tilemap-assets.json');
+            this.game.load.image('background', 'assets/background.gif');
         }
         
         create() {
+            this.background = this.game.add.tileSprite(0, 0, 1920, 1600, 'background'); //add the background
+            this.background.fixedToCamera = true;
+            
+            this.background.tileScale.set(0.5, 0.5);
+            
             this.map = this.game.add.tiledmap('test');
             var mapObjects = Lazy(this.map.objects),
                 spawns = this.getObjectsByName(mapObjects, 'Spawns'),
@@ -23,10 +32,13 @@ module PhaserGame {
             this.stage.backgroundColor = "#3fc1fb";
             this.player = new Player(this.game, playerData.x, playerData.y); 
             this.game.physics.p2.convertTiledCollisionObjects(this.map, 'collision');
+         
+            this.maxCamera = this.game.world.height - (this.game.height);
         }
-        
+
         update() {
-            //this.game.physics.p2.convertTiledmap(map, 'tilelayer-name');
+           this.backgroundCameraPosition = (this.game.camera.y * .15) - (this.maxCamera * .15);
+           this.background.tilePosition.set(this.game.camera.x * -0.25, -this.backgroundCameraPosition + (this.game.height * 2) - (this.background.height));
             
             //only move camera if character is over 50%
             if (this.cursor.up.isDown)
