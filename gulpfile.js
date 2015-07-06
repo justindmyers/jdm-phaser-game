@@ -25,5 +25,5 @@ function build() {
 function pack() {
     return gulp.src('./src/levels/testlevel/**/*.json')
                .pipe(tiledmapPack({ baseUrl: 'assets' }))
-               .pipe(gulp.dest('/public/assets'));
+               .pipe(gulp.dest('public/assets'));
 }

@@ -22,7 +22,7 @@ module PhaserGame {
             game.physics.p2.enable(this);
             
             this.body.fixedRotation = true;
-            game.physics.p2.gravity.y = 500;
+            game.physics.p2.gravity.y = 1200;
                     
             game.camera.follow(this);
         }
@@ -64,7 +64,7 @@ module PhaserGame {
             
             this.jumpButton.onDown.add(function(key) {
                 if(this.game.time.now > this.jumpTimer && this.checkIfCanJump()) {
-                    this.body.moveUp(300);
+                    this.body.moveUp(600);
                     this.jumpTimer = this.game.time.now + 750;
                 }
             }, this)

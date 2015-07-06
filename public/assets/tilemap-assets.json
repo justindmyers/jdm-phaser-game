@@ -1,6 +1,6 @@
 {
     "meta": {
-        "generated": "1434947871414",
+        "generated": "1435893600784",
         "version": "1.0",
         "app": "gulp-phaser-tiled-pack",
         "url": "https://github.com/englercj/gulp-phaser-tiled-pack"
@@ -580,6 +580,94 @@
             "key": "test_tileset_image_15_Extras",
             "name": "Extras_image_15",
             "url": "../../public/assets/bg/tree_top.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_0_Objects",
+            "name": "Objects_image_0",
+            "url": "../../public/assets/props/baloon.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_1_Objects",
+            "name": "Objects_image_1",
+            "url": "../../public/assets/props/chest_closed.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_2_Objects",
+            "name": "Objects_image_2",
+            "url": "../../public/assets/props/chest_open.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_3_Objects",
+            "name": "Objects_image_3",
+            "url": "../../public/assets/props/coin.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_4_Objects",
+            "name": "Objects_image_4",
+            "url": "../../public/assets/props/crate.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_5_Objects",
+            "name": "Objects_image_5",
+            "url": "../../public/assets/props/jump_pad.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_6_Objects",
+            "name": "Objects_image_6",
+            "url": "../../public/assets/props/key.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_7_Objects",
+            "name": "Objects_image_7",
+            "url": "../../public/assets/props/sign_exclamation.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_8_Objects",
+            "name": "Objects_image_8",
+            "url": "../../public/assets/props/sign_question.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_9_Objects",
+            "name": "Objects_image_9",
+            "url": "../../public/assets/props/star.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "subtype": "tileset_image",
+            "key": "test_tileset_image_10_Objects",
+            "name": "Objects_image_10",
+            "url": "../../public/assets/props/stone.png",
             "overwrite": false
         },
         {
