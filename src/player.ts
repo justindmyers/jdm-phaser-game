@@ -2,11 +2,9 @@ module PhaserGame {
     export class Player extends Character {
         attackButton: Phaser.Key = this.game.input.keyboard.addKey(this.game.CONFIG.INPUT.ATTACK);
         jumpButton: Phaser.Key = this.game.input.keyboard.addKey(this.game.CONFIG.INPUT.JUMP);
-        jumpTimer: Number = 0;
-        isAttacking: Boolean = false;
         
         constructor(game: PhaserGame.Game, spriteKey: string, x: number, y: number) {
-            super(game, x, y, spriteKey, 0);
+            super(game, x, y, spriteKey, 0);         
             
             game.physics.startSystem(Phaser.Physics.P2JS);
             game.add.existing(this);
@@ -28,7 +26,6 @@ module PhaserGame {
         }
                 
         update() {
-            this.body.velocity.x = 0;
             this.anchor.setTo(.3, .5);
                         
             if (this.game.input.keyboard.isDown(this.game.CONFIG.INPUT.LEFT)) {
@@ -81,24 +78,7 @@ module PhaserGame {
             }
         }
         
-        checkIfCanJump() {
-            var yAxis = p2.vec2.fromValues(0, 1);
-            var result = false;
         
-            for (var i = 0; i < this.game.physics.p2.world.narrowphase.contactEquations.length; i++)
-            {
-                var c = this.game.physics.p2.world.narrowphase.contactEquations[i];
-        
-                if (c.bodyA === this.body.data || c.bodyB === this.body.data)
-                {
-                    var d = p2.vec2.dot(c.normalA, yAxis); // Normal dot Y-axis
-                    if (c.bodyA === this.body.data) d *= -1;
-                    if (d > 0.5) result = true;
-                }
-            }
-            
-            return result;
-        }
 
     }
 }
