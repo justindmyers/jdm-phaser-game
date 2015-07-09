@@ -1,14 +1,11 @@
 module PhaserGame {
-    export class Player extends jdmGameSprite {
-        attackButton: Phaser.Key = this.game.input.keyboard.addKey(this.game.CONFIG.INPUT.ATTACK);
-        jumpButton: Phaser.Key = this.game.input.keyboard.addKey(this.game.CONFIG.INPUT.JUMP);
+    export class Enemy extends jdmGameSprite {
         jumpTimer: Number = 0;
-        isAttacking: Boolean = false;
+        isAttacking: Boolean = false; 
         
         constructor(game: PhaserGame.Game, spriteKey: string, x: number, y: number) {
             super(game, x, y, spriteKey, 0);
             
-            game.physics.startSystem(Phaser.Physics.P2JS);
             game.add.existing(this);
             this.smoothed = false;
 
@@ -23,34 +20,15 @@ module PhaserGame {
             
             this.body.fixedRotation = true;
             game.physics.p2.gravity.y = 1200;
-                    
-            game.camera.follow(this);
         }
                 
         update() {
             this.body.velocity.x = 0;
-            this.anchor.setTo(.3, .5);
                         
-            if (this.game.input.keyboard.isDown(this.game.CONFIG.INPUT.LEFT)) {
-                this.body.moveLeft(200);
-                
-                if(!this.isAttacking) {
-                    this.animations.play('walk');
-                }
-
-                if (this.scale.x == 1) {
-                    this.scale.x = -1;
-                }
-            } else if (this.game.input.keyboard.isDown(this.game.CONFIG.INPUT.RIGHT)) {
-                this.body.moveLeft(-200);
-                
-                if(!this.isAttacking) {
-                    this.animations.play('walk');
-                }
-
-                if (this.scale.x == -1) {
-                    this.scale.x = 1;
-                }
+            if (this.shouldMove()) {
+                this.moveLeft();
+            } else if (this.shouldMove()) {
+                this.moveRight();
             } else {
                 if(!this.isAttacking) {
                     this.animations.frame = 0;
@@ -58,16 +36,40 @@ module PhaserGame {
             }
             
             //The buttons below only register once per keypress
-            this.attackButton.onDown.add(function(key) {
+            if(this.shouldAttack()) {
                 this.attack();
-            }, this);
+            }
             
-            this.jumpButton.onDown.add(function(key) {
+            if(this.shouldJump()) {
                 if(this.game.time.now > this.jumpTimer && this.checkIfCanJump()) {
                     this.body.moveUp(600);
                     this.jumpTimer = this.game.time.now + 750;
                 }
-            }, this)
+            }
+        }
+        
+        moveLeft() {
+            this.body.moveLeft(200);
+            
+            if(!this.isAttacking) {
+                this.animations.play('walk');
+            } 
+
+            if (this.scale.x == 1) {
+                this.scale.x = -1;
+            }
+        }
+        
+        moveRight() {
+            this.body.moveLeft(-200);
+            
+            if(!this.isAttacking) {
+                this.animations.play('walk');
+            }
+
+            if (this.scale.x == -1) {
+                this.scale.x = 1;
+            }
         }
         
         attack() {
@@ -79,6 +81,18 @@ module PhaserGame {
                     this.isAttacking = false;
                 }, this);
             }
+        }
+        
+        shouldMove() {
+            return false;
+        }
+        
+        shouldAttack() {
+            return false;
+        }
+        
+        shouldJump() {
+            return false;
         }
         
         checkIfCanJump() {

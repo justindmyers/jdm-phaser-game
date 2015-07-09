@@ -4,6 +4,7 @@ module PhaserGame {
         cursor: Phaser.CursorKeys;
         layer: Object;
         player: Player;
+        enemy: Enemy;
         spawns: Object;
         background: Phaser.TileSprite;
         background2: Phaser.TileSprite;
@@ -47,7 +48,8 @@ module PhaserGame {
                     
             this.cursor = this.input.keyboard.createCursorKeys();
             this.stage.backgroundColor = "#3fc1fb";
-            this.player = new Player(this.game, playerData.x, playerData.y); //Player creates the physics, make sure to create if it doesn't already exist
+            this.player = new Player(this.game, 'simon', playerData.x, playerData.y); //Player creates the physics, make sure to create if it doesn't already exist
+            this.enemy = new Enemy(this.game, 'simon', 500, 1000);
             
             this.createGameObjects(objectData);
             this.createPlatforms(platformData); //setup the platforms
