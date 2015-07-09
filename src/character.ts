@@ -7,10 +7,15 @@ module PhaserGame {
         isJumpingLogic: Boolean = false;
         
         update() {
-            this.body.velocity.x = 0;
         }
         
         attack() {
+        }
+        
+        moveLeft() {            
+        }
+        
+        moveRight() {            
         }
         
         checkIfCanJump() {
@@ -30,6 +35,9 @@ module PhaserGame {
             }
             
             return result;
+        }
+        
+        shouldJump() {            
         }
                 
         shouldMove(direction: string) {

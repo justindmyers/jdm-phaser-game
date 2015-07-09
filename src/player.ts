@@ -25,7 +25,8 @@ module PhaserGame {
             game.camera.follow(this);
         }
                 
-        update() {
+        update() {            
+            this.body.velocity.x = 0;
             this.anchor.setTo(.3, .5);
                         
             if (this.game.input.keyboard.isDown(this.game.CONFIG.INPUT.LEFT)) {
