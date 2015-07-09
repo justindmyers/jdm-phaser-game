@@ -61,11 +61,13 @@ module PhaserGame {
             }, this);
             
             this.jumpButton.onDown.add(function(key) {
-                if(this.game.time.now > this.jumpTimer && this.checkIfCanJump()) {
-                    this.body.moveUp(600);
-                    this.jumpTimer = this.game.time.now + 750;
-                }
-            }, this)
+                this.jump();
+            }, this);
+            
+            if(this.checkIfWallCollision()) {
+                //test auto jumping if we hit a wall
+                this.jump();
+            };
         }
         
         attack() {
@@ -79,7 +81,11 @@ module PhaserGame {
             }
         }
         
-        
-
+        jump() {
+            if(this.game.time.now > this.jumpTimer && this.checkIfCanJump()) {
+                this.body.moveUp(600);
+                this.jumpTimer = this.game.time.now + 750;
+            }   
+        }
     }
 }

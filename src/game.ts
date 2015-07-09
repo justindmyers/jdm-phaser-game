@@ -3,7 +3,7 @@ module PhaserGame {
         CONFIG: jdmGameConfig = new jdmGameConfig(); //merge from json file later
         
         constructor() {
-            super(800, 600, Phaser.AUTO, 'content', null);
+            super(800, 600, Phaser.CANVAS, 'content', null);
             
             this.state.add('Boot', Boot, false);
             this.state.add('Preloader', Preloader, false);
