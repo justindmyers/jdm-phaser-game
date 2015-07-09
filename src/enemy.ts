@@ -1,10 +1,5 @@
 module PhaserGame {
-    export class Enemy extends jdmGameSprite {
-        jumpTimer: Number = 0;
-        isAttacking: Boolean = false; 
-        isMovingLeft: Boolean = false;
-        isMovingRight: Boolean = false;
-        isJumpingLogic: Boolean = false;
+    export class Enemy extends Character {        
         queuedJump: Boolean = false;
         
         constructor(game: PhaserGame.Game, spriteKey: string, x: number, y: number) {
@@ -87,17 +82,7 @@ module PhaserGame {
             }
         }
         
-        shouldMove(direction: string) {
-            /*this.game.time.events.add(3000, function() {
-                this.isMovingLeft = true;
-            }, this);      */   
-
-            return false;
-        }
         
-        shouldAttack() {
-            return false;
-        }
         
         shouldJump() {
             //give 30% chance to jump

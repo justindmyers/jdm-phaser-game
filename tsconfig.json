@@ -12,6 +12,7 @@
         "src/boot.ts",
         "src/game.ts",
         "src/mainmenu.ts",
+        "src/character.ts",
         "src/player.ts",
         "src/enemy.ts",
         "src/preloader.ts",

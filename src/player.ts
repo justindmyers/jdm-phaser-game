@@ -1,5 +1,5 @@
 module PhaserGame {
-    export class Player extends jdmGameSprite {
+    export class Player extends Character {
         attackButton: Phaser.Key = this.game.input.keyboard.addKey(this.game.CONFIG.INPUT.ATTACK);
         jumpButton: Phaser.Key = this.game.input.keyboard.addKey(this.game.CONFIG.INPUT.JUMP);
         jumpTimer: Number = 0;
