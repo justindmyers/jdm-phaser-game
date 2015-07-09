@@ -2,6 +2,10 @@ module PhaserGame {
     export class Enemy extends jdmGameSprite {
         jumpTimer: Number = 0;
         isAttacking: Boolean = false; 
+        isMovingLeft: Boolean = false;
+        isMovingRight: Boolean = false;
+        isJumpingLogic: Boolean = false;
+        queuedJump: Boolean = false;
         
         constructor(game: PhaserGame.Game, spriteKey: string, x: number, y: number) {
             super(game, x, y, spriteKey, 0);
@@ -13,7 +17,7 @@ module PhaserGame {
             this.animations.add('walk', [0, 1, 2, 3, 4], 10, true);
             this.animations.add('climb', [12, 13], 10, true);
             this.animations.add('attack', [6, 7, 8, 9, 10], 10, false);
-            this.animations.add('duck', [5], 10, false);
+            this.animations.add('duck', [5], 10, false); 
             
             //animations (walk, duck, attack, duck/attack, damage, climb)                        
             game.physics.p2.enable(this);
@@ -25,9 +29,9 @@ module PhaserGame {
         update() {
             this.body.velocity.x = 0;
                         
-            if (this.shouldMove()) {
+            if (this.shouldMove('left')) {
                 this.moveLeft();
-            } else if (this.shouldMove()) {
+            } else if (this.shouldMove('right')) {
                 this.moveRight();
             } else {
                 if(!this.isAttacking) {
@@ -83,7 +87,11 @@ module PhaserGame {
             }
         }
         
-        shouldMove() {
+        shouldMove(direction: string) {
+            /*this.game.time.events.add(3000, function() {
+                this.isMovingLeft = true;
+            }, this);      */   
+
             return false;
         }
         
@@ -92,6 +100,24 @@ module PhaserGame {
         }
         
         shouldJump() {
+            //give 30% chance to jump
+            
+            if(!this.isJumpingLogic) {
+                this.isJumpingLogic = true;
+                this.game.time.events.add(2000, function() {
+                    if(Math.floor(Math.random() * (6 + 1)) === 0) {
+                        this.queuedJump = true;
+                    }
+                    
+                    this.isJumpingLogic = false;
+                }, this);
+            }
+            
+            if(this.queuedJump) {
+                this.queuedJump = false;
+                return true;
+            }
+            
             return false;
         }
         
