@@ -27,9 +27,14 @@ build/Release
 node_modules
 bower_components
 
-public/compiled.js
-public/compiled.js.map
+# Webstorm
 .idea/
 
 # Ignore tsd installs
 typings
+
+# Ignore generated project files
+public/compiled.js
+public/compiled.js.map
+public/assets/tilemap-assets.json
+public/assets/levels

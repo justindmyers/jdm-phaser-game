@@ -8,22 +8,27 @@ var gulp = require('gulp'),
  *****/
 gulp.task('pack', function () {
     pack();
+    copyLevels();
 });
 
 gulp.task('build', function() {
     build();
 });
 
-function build() {
-    //pack();
-    
+function build() {    
     var tsResult = gulp.src('src/**/*.ts')
         .pipe(typescript(typescriptConfig.compilerOptions));
+        
     return tsResult.js.pipe(gulp.dest(''));
 }
 
 function pack() {
-    return gulp.src('./src/levels/testlevel/**/*.json')
-               .pipe(tiledmapPack({ baseUrl: 'assets' }))
-               .pipe(gulp.dest('public/assets'));
+    return gulp.src('./src/levels/**/*.json')
+               .pipe(tiledmapPack({ baseUrl: 'assets/levels' }))
+               .pipe(gulp.dest('./public/assets')); 
+}
+
+function copyLevels() {
+    return gulp.src('./src/levels/**/*.json', { "base" : "./src" })
+        .pipe(gulp.dest('public/assets'));
 }
