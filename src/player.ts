@@ -13,10 +13,12 @@ module PhaserGame {
             //TODO: Load animations from level
             this.animations.add('walk', [0, 1, 2, 3, 4], 10, true);
             this.animations.add('climb', [12, 13], 10, true);
-            this.animations.add('attack', [6, 7, 8, 9, 10], 10, false);
-            this.animations.add('duck', [5], 10, false);
+            var attackAnimation = this.animations.add('attack', [6, 7, 8, 9, 10], 30, false);
+            this.animations.add('jump', [5], 10, true);
             
-            //animations (walk, duck, attack, duck/attack, damage, climb)                        
+            attackAnimation.onComplete.add(this.attackAnimationStopped, this);
+            
+
             game.physics.p2.enable(this);
             
             this.body.fixedRotation = true;
@@ -25,10 +27,13 @@ module PhaserGame {
             game.camera.follow(this);
         }
                 
-        update() {            
+        update() {         
+            super.update();
+               
             this.body.velocity.x = 0;
             this.anchor.setTo(.3, .5);
-                        
+            
+      
             if (this.game.input.keyboard.isDown(this.game.CONFIG.INPUT.LEFT)) {
                 this.body.moveLeft(200);
                 
@@ -50,10 +55,15 @@ module PhaserGame {
                     this.scale.x = 1;
                 }
             } else {
-                if(!this.isAttacking) {
+                if(!this.isAttacking && !this.isJumping) {
                     this.animations.frame = 0;
                 }
             }
+            
+            if(this.isJumping && !this.isAttacking) {
+                this.animations.play('jump');
+            }
+                  
             
             //The buttons below only register once per keypress
             this.attackButton.onDown.add(function(key) {
@@ -71,14 +81,18 @@ module PhaserGame {
         }
         
         attack() {
-            if (!this.isAttacking)
-            {
+            if (!this.isAttacking) {
                 this.animations.play('attack');
                 this.isAttacking = true;
-                this.game.time.events.add(450, function() {
+                this.isJumping = false;
+                this.game.time.events.add(250, function() {
                     this.isAttacking = false;
                 }, this);
             }
+        }
+        
+        attackAnimationStopped(sprite, animation) {
+            this.animations.frame = 0;
         }
     }
 }

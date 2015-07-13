@@ -1,12 +1,16 @@
 module PhaserGame {
     export class Character extends jdmGameSprite {
-        jumpTimer: Number = 0;
-        isAttacking: Boolean = false; 
+        jumpTimer: number = 0;
+        isAttacking: Boolean = false;
+        isJumping: Boolean = false;
         isMovingLeft: Boolean = false;
         isMovingRight: Boolean = false;
         isJumpingLogic: Boolean = false;
         
         update() {
+            if(this.isJumping && (this.game.time.now > this.jumpTimer + 50) && this.checkIfCanJump()) {
+                this.isJumping = false;
+            }
         }
         
         attack() {
@@ -22,6 +26,7 @@ module PhaserGame {
             if(this.game.time.now > this.jumpTimer && this.checkIfCanJump()) {
                 this.body.moveUp(600);
                 this.jumpTimer = this.game.time.now + 750;
+                this.isJumping = true;
             }   
         }
         
@@ -54,9 +59,11 @@ module PhaserGame {
                 var c = this.game.physics.p2.world.narrowphase.contactEquations[i];
         
                 if (c.bodyA === this.body.data || c.bodyB === this.body.data)
-                {                    
+                {
                     var d = p2.vec2.dot(c.normalA, xAxis); // Normal dot Y-axis
-                    if (Math.abs(d) > 0.8) result = true;
+                    if (Math.abs(d) >= 0.999) {
+                        result = true;
+                    }
                 }
             }
             
