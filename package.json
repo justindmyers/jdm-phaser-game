@@ -23,6 +23,8 @@
     "phaser-tiled": "^1.4.1"
   },
   "devDependencies": {
+    "gulp-phaser-tiled-pack": "^1.1.0",
+    "gulp-typescript": "^2.7.8",
     "phaser": "^2.3.0"
   }
 }
