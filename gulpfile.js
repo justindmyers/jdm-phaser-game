@@ -11,11 +11,11 @@ gulp.task('pack', function () {
     copyLevels();
 });
 
-gulp.task('build', function() {
-    build();
+gulp.task('compile', function() {
+    compile();
 });
 
-function build() {    
+function compile() {    
     var tsResult = gulp.src('src/**/*.ts')
         .pipe(typescript(typescriptConfig.compilerOptions));
         

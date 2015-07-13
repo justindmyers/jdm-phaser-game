@@ -1,5 +1,8 @@
 module PhaserGame {
     export class Character extends jdmGameSprite {
+        health: Number;
+        attackPower: Number;
+        defensePower: Number;
         jumpTimer: Number = 0;
         isAttacking: Boolean = false; 
         isMovingLeft: Boolean = false;
