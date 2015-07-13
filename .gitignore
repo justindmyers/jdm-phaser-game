@@ -27,8 +27,8 @@ build/Release
 node_modules
 bower_components
 
-public/*.js
-public/*.js.map
+public/compiled.js
+public/compiled.js.map
 .idea/
 
 # Ignore tsd installs
