@@ -30,3 +30,6 @@ bower_components
 public/compiled.js
 public/compiled.js.map
 .idea/
+
+# Ignore tsd installs
+typings

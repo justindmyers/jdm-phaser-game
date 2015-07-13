@@ -13,6 +13,9 @@
     },
     "lazy.js/lazy.js.d.ts": {
       "commit": "6387999eb899d0ba02d37dd8697647718caca230"
+    },
+    "node/node.d.ts": {
+      "commit": "38c6ccfde0e67ff10d7408e0ee8b7720b3f21d3b"
     }
   }
 }
