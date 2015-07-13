@@ -1,6 +1,9 @@
 module PhaserGame {
     export class Enemy extends Character {        
         queuedJump: Boolean = false;
+        isMovingLogic: Boolean = false;
+        queuedMove: Boolean = true;
+        currentMovement: string = 'left';
         
         constructor(game: PhaserGame.Game, spriteKey: string, x: number, y: number) {
             super(game, x, y, spriteKey, 0);
@@ -23,10 +26,12 @@ module PhaserGame {
                 
         update() {           
             this.body.velocity.x = 0;    
+            
+            this.currentMovement = this.shouldMove();
                             
-            if (this.shouldMove('left')) {
+            if (this.currentMovement == 'left') {
                 this.moveLeft();
-            } else if (this.shouldMove('right')) {
+            } else if (this.currentMovement == 'right') {
                 this.moveRight();
             } else {
                 if(!this.isAttacking) {
@@ -39,11 +44,27 @@ module PhaserGame {
                 this.attack();
             }
             
+            if(this.checkIfWallCollision()) {
+                //test auto jumping if we hit a wall
+                this.jump();
+            };
+            
             if(this.shouldJump()) {
                 if(this.game.time.now > this.jumpTimer && this.checkIfCanJump()) {
                     this.body.moveUp(600);
                     this.jumpTimer = this.game.time.now + 750;
                 }
+            }
+        }
+        
+        attack() {
+            if (!this.isAttacking)
+            {
+                this.animations.play('attack');
+                this.isAttacking = true;
+                this.game.time.events.add(450, function() {
+                    this.isAttacking = false;
+                }, this);
             }
         }
         
@@ -70,19 +91,33 @@ module PhaserGame {
                 this.scale.x = 1;
             }
         }
-        
-        attack() {
-            if (!this.isAttacking)
-            {
-                this.animations.play('attack');
-                this.isAttacking = true;
-                this.game.time.events.add(450, function() {
-                    this.isAttacking = false;
+
+        shouldMove() {
+            //check to see that we're not already determining the movement
+            if(!this.isMovingLogic) {
+                this.isMovingLogic = true;
+                this.game.time.events.add(2000, function() {
+                    if(Math.floor(Math.random() * (2 + 1)) === 0 && !this.queuedJump) {
+                        this.queuedMove = true;
+                    }
+                    
+                    this.isMovingLogic = false;
                 }, this);
             }
+            
+            if(this.queuedMove) {
+                this.queuedMove = false;
+                
+                
+                if(Math.floor(Math.random() * 2) === 0) {
+                    return 'left';
+                } else {
+                    return 'right';
+                }
+            }
+            
+            return this.currentMovement;
         }
-        
-        
         
         shouldJump() {
             //give 30% chance to jump

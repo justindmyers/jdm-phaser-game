@@ -72,6 +72,8 @@ module PhaserGame {
         constructor(private $scope: ng.IScope) {
             var self = this;
             console.log('In Level1 Controller')
+            
+            
         }
         
     }

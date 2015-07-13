@@ -137,7 +137,7 @@
                  "type":"",
                  "visible":true,
                  "width":45,
-                 "x":201,
+                 "x":200,
                  "y":685
                 }],
          "opacity":1,
@@ -283,7 +283,7 @@
          "name":"collision",
          "objects":[
                 {
-                 "height":120.884,
+                 "height":128,
                  "id":28,
                  "name":"",
                  "properties":
@@ -295,7 +295,7 @@
                  "visible":true,
                  "width":320,
                  "x":0,
-                 "y":1029
+                 "y":1024
                 }, 
                 {
                  "height":64,
@@ -343,7 +343,7 @@
                  "y":579
                 }, 
                 {
-                 "height":124.584,
+                 "height":128,
                  "id":41,
                  "name":"",
                  "properties":
@@ -353,12 +353,12 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":380.409,
-                 "x":322.397,
-                 "y":706.61
+                 "width":384,
+                 "x":320,
+                 "y":704
                 }, 
                 {
-                 "height":56.1103,
+                 "height":64,
                  "id":44,
                  "name":"",
                  "properties":
@@ -368,12 +368,12 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":188.302,
-                 "x":130.29,
-                 "y":773.181
+                 "width":192,
+                 "x":128,
+                 "y":768
                 }, 
                 {
-                 "height":60.8654,
+                 "height":64,
                  "id":46,
                  "name":"",
                  "properties":
@@ -383,9 +383,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":187.351,
-                 "x":386.017,
-                 "y":1027.25
+                 "width":192,
+                 "x":384,
+                 "y":1024
                 }, 
                 {
                  "height":56.1103,
@@ -415,7 +415,7 @@
                  "visible":true,
                  "width":320,
                  "x":0,
-                 "y":1412
+                 "y":1408
                 }, 
                 {
                  "height":64,
@@ -430,10 +430,10 @@
                  "visible":true,
                  "width":254,
                  "x":320,
-                 "y":1476
+                 "y":1472
                 }, 
                 {
-                 "height":54.2083,
+                 "height":64,
                  "id":51,
                  "name":"",
                  "properties":
@@ -443,9 +443,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":506.553,
-                 "x":706,
-                 "y":1477.89
+                 "width":512,
+                 "x":704,
+                 "y":1472
                 }, 
                 {
                  "height":0,
@@ -487,6 +487,7 @@
          "y":0
         }, 
         {
+         "color":"#e10019",
          "draworder":"topdown",
          "height":0,
          "name":"Objects",
@@ -504,8 +505,8 @@
                  "type":"",
                  "visible":true,
                  "width":64,
-                 "x":513,
-                 "y":1477
+                 "x":512,
+                 "y":1476
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -515,12 +516,13 @@
          "y":0
         }, 
         {
+         "color":"#00d722",
          "draworder":"topdown",
-         "height":24,
+         "height":0,
          "name":"Platforms",
          "objects":[
                 {
-                 "height":177,
+                 "height":192,
                  "id":60,
                  "name":"",
                  "properties":
@@ -531,14 +533,14 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":191,
+                 "width":64,
                  "x":384,
-                 "y":1177
+                 "y":1164
                 }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
-         "width":35,
+         "width":0,
          "x":0,
          "y":0
         }],

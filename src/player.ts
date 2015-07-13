@@ -66,7 +66,7 @@ module PhaserGame {
             
             if(this.checkIfWallCollision()) {
                 //test auto jumping if we hit a wall
-                this.jump();
+                //this.jump();
             };
         }
         
@@ -79,13 +79,6 @@ module PhaserGame {
                     this.isAttacking = false;
                 }, this);
             }
-        }
-        
-        jump() {
-            if(this.game.time.now > this.jumpTimer && this.checkIfCanJump()) {
-                this.body.moveUp(600);
-                this.jumpTimer = this.game.time.now + 750;
-            }   
         }
     }
 }
