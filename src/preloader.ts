@@ -11,7 +11,7 @@ module PhaserGame {
             this.load.image('titlepage', 'assets/titlepage.jpg');
             this.load.image('logo', 'assets/logo.png');
             this.load.audio('music', 'assets/title.mp3', true);
-            this.load.spritesheet('simon', 'assets/character.png', 66, 66, 13, 1);
+            this.load.spritesheet('simon', 'assets/character.png', 70, 66, 13, 1);
         }
          
         create() {
