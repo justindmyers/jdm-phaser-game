@@ -1,4 +1,6 @@
 /// <reference path="../../typings/tsd.d.ts"/>
+/// <reference path="../../node_modules/phaser/typescript/phaser.d.ts" />
+/// <reference path="../../node_modules/phaser-tiled/typescript/phaser-tiled.d.ts" />
 module PhaserGame {
     window['state'] = {}; 
     
