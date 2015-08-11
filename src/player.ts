@@ -25,7 +25,7 @@ module PhaserGame {
             
             this.addChild(this.weapon);
             
-            game.physics.p2.enable([this], true);
+            game.physics.p2.enable([this]);
             game.physics.p2.gravity.y = 1200;
             
             this.body.fixedRotation = true;

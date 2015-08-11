@@ -5,6 +5,7 @@ module PhaserGame {
         layer: Object;
         player: Player;
         enemy: Enemy;
+        snake: Snake;
         spawns: Object;
         background: Phaser.TileSprite;
         background2: Phaser.TileSprite;
@@ -50,6 +51,8 @@ module PhaserGame {
             this.stage.backgroundColor = "#3fc1fb";
             this.player = new Player(this.game, 'simon', playerData.x, playerData.y); //Player creates the physics, make sure to create if it doesn't already exist
             this.enemy = new Enemy(this.game, 'simon', 500, 1000);
+            this.snake = new Snake(this.game, 'snake', 300, 1000);
+            this.snake.addPlayerToTrack(this.player); //add our player so the snake can track it
             
             this.createGameObjects(objectData);
             this.createPlatforms(platformData); //setup the platforms

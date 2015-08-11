@@ -12,6 +12,7 @@ module PhaserGame {
             this.load.image('logo', 'assets/logo.png');
             this.load.audio('music', 'assets/title.mp3', true);
             this.load.spritesheet('simon', 'assets/character.png', 70, 66, 13, 1);
+            this.load.spritesheet('snake', 'assets/snake.png', 35, 32, 4);
         }
          
         create() {

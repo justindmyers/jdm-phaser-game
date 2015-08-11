@@ -15,6 +15,7 @@
         "src/character.ts",
         "src/player.ts",
         "src/enemy.ts",
+        "src/snake.ts",
         "src/preloader.ts",
         "src/levels/testlevel/testlevel.ts"
     ]
