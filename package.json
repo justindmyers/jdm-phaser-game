@@ -24,6 +24,7 @@
   "devDependencies": {
     "gulp-install": "^0.4.0",
     "gulp-phaser-tiled-pack": "^1.1.0",
+    "gulp-sass": "^2.0.4",
     "gulp-tsd": "0.0.4",
     "gulp-typescript": "^2.7.8",
     "phaser": "^2.3.0",

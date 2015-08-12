@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     typescriptConfig = require('./tsconfig.json'),
     tiledmapPack = require('gulp-phaser-tiled-pack'),
     install = require("gulp-install"),
-    tsd = require('gulp-tsd');
+    tsd = require('gulp-tsd'),
+    sass = require('gulp-sass');
 
 /*****
  * Assets Phaser packs task, creates phaser asset loader packs for tilemaps
@@ -28,6 +29,12 @@ gulp.task('tsd', function(callback) {
         command: 'reinstall',
         config: './tsd.json'
     }, callback);
+});
+
+gulp.task('sass', function () {
+    gulp.src('src/app/scss/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('public'));
 });
 
 function build() {

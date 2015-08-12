@@ -34,6 +34,7 @@ bower_components
 typings
 
 # Ignore generated project files
+public/app.css
 public/compiled.js
 public/compiled.js.map
 public/assets/tilemap-assets.json
