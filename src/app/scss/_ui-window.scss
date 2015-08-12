@@ -1,0 +1,169 @@
+$ui-window-sprite-width: 32px;
+$ui-window-sprite-height: 32px;
+$window-corner-type-spacing: 128px;
+$window-inner-type-spacing: 64px;
+
+$ui-window-content-font-color: #fff;
+$ui-window-corner-z-index: 5;
+$ui-window-content-z-index: 10;
+
+$ui-window-corner-url: 'http://i.imgur.com/cuMQegT.png';
+$ui-window-inner-horizontal-url: 'http://i.imgur.com/Xqdkiyu.png';
+$ui-window-inner-vertical-url: 'http://i.imgur.com/ndmSaAI.png';
+
+$window-types: 'normal',
+               'classic',
+               'modern';
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 1px 1px black;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+section{
+  float: left;
+  margin: .5rem;
+}
+
+.ui-modal {
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+}
+
+ui-window {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+div[modal-backdrop] {
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@each $window in $window-types {
+  $idx: index($window-types, $window) - 1;
+  
+  $window-corner-type-spacing-calc: ($idx * -$window-corner-type-spacing);
+  $window-inner-type-spacing-calc: ($idx * -$window-inner-type-spacing);
+  
+  .ui-window--#{$window} {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    color: $ui-window-content-font-color;
+
+    & > span {
+      position: absolute;
+      width: $ui-window-sprite-width;
+      height: $ui-window-sprite-height;
+
+      &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: $ui-window-sprite-width;
+        height: $ui-window-sprite-height;
+        z-index: $ui-window-corner-z-index;
+      }
+
+      &.content {
+        z-index: $ui-window-content-z-index;
+      }
+    }
+
+    .ui-window--content {
+      background: #c59782;
+      position: absolute;
+      top: $ui-window-sprite-height;
+      bottom: $ui-window-sprite-height;
+      left: $ui-window-sprite-height;
+      right: $ui-window-sprite-height;
+    }
+
+    .ui-window--top {
+      background: url($ui-window-inner-horizontal-url) 0 $window-inner-type-spacing-calc;
+      width: auto;
+      top: 0;
+      left: $ui-window-sprite-width;
+      right: $ui-window-sprite-width;
+
+      &:before {
+        background: url($ui-window-corner-url) ($window-corner-type-spacing-calc) 0 no-repeat;
+        left: -$ui-window-sprite-width;
+        top: 0;
+      }
+
+      &:after {
+        background: url($ui-window-corner-url) ($window-corner-type-spacing-calc - $ui-window-sprite-width) 0 no-repeat;
+        top: 0;
+        right: -$ui-window-sprite-width;
+      }
+    }
+
+    .ui-window--right {
+      background:  url($ui-window-inner-vertical-url) ($window-inner-type-spacing-calc - $ui-window-sprite-width) 0;
+      height: auto;
+      right: 0;
+      top: $ui-window-sprite-height;
+      bottom: $ui-window-sprite-height;
+    }
+
+    .ui-window--bottom { 
+      background: url($ui-window-inner-horizontal-url) 0 ($window-inner-type-spacing-calc - $ui-window-sprite-height);
+      bottom: 0;
+      left: $ui-window-sprite-width;
+      right: $ui-window-sprite-width;
+      width: auto;
+
+      &:after {
+        background: url($ui-window-corner-url) ($window-corner-type-spacing-calc - $ui-window-sprite-width * 3) 0 no-repeat;
+        right: -$ui-window-sprite-width;
+        bottom: 0;
+      }
+
+      &:before {
+        background: url($ui-window-corner-url) ($window-corner-type-spacing-calc - $ui-window-sprite-width * 2) 0 no-repeat;
+        left: -$ui-window-sprite-width;
+        bottom: 0;
+      }
+    }
+
+    .ui-window--left {
+      background: url($ui-window-inner-vertical-url) $window-inner-type-spacing-calc 0;
+      left: 0;
+      top: $ui-window-sprite-height;
+      bottom: $ui-window-sprite-height;
+      height: auto;
+    }
+  }
+}
+
+.ui-window--normal .ui-window--content {
+  background-color: #523328;
+}
+
+.ui-window--classic .ui-window--content {
+  background-color: #141414;
+}
+
+.ui-window--modern .ui-window--content {
+  background-color: #ad6c3c;
+}
+
+.ui-window--classic.inner {
+  width: calc(100% - 16px);
+  height: 100px;
+  position: relative;
+  z-index: 15;
+}
